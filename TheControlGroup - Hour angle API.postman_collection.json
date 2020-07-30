@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "52ec97d8-de0c-4cef-b6c5-1084c750589d",
+		"name": "TheControlGroup - Hour angle API",
+		"description": "An API that calculate the angle between the hours and minutes hand on an analog clock.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "[GET] Angle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/angle?h=5&m=30",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"angle"
+					],
+					"query": [
+						{
+							"key": "h",
+							"value": "5"
+						},
+						{
+							"key": "m",
+							"value": "30"
+						}
+					]
+				},
+				"description": "Get the angle between hour and minutes from a query."
+			},
+			"response": []
+		},
+		{
+			"name": "[POST] Angle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"h\": 16,\n\t\"m\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/angle",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"angle"
+					]
+				},
+				"description": "Calculate the angle between the hour and minute hand through a POST method"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

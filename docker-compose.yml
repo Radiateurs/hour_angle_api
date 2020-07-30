@@ -1,0 +1,7 @@
+# docker-compose.yml (tag: v4)
+web:
+    build: ./hour_angle_api_core
+    ports:
+    - '3030:3030'
+    environment:
+    - NODE_ENV=production
